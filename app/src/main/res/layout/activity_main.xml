@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/lunchTxtView"
+        android:layout_width="139dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Lunch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentDateTextView2" />
+
+    <TextView
+        android:id="@+id/currentDateTextView2"
+        android:layout_width="139dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="134dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunchTxtView">
+
+        <TextView
+            android:id="@+id/lunchMealTextView0"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/lunchMealTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/lunchMealTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/lunchMealTextView3"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="171dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunchTxtView">
+
+        <TextView
+            android:id="@+id/lunchCalorieTextView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/lunchCarbohydrateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/lunchPoteinTextView"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/lunchFatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dinnerTextView"
+        android:layout_width="104dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Dinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:layout_width="146dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dinnerTextView">
+
+        <TextView
+            android:id="@+id/dinnerMealTexView0"
+            android:layout_width="140dp"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dinnerMealTexView1"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dinnerMealTexView2"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dinnerMealTexView3"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="173dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dinnerTextView">
+
+        <TextView
+            android:id="@+id/dinnerCalorieTextView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dinnerCarbohydrateTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dinnerProteinTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dinnerFatTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
