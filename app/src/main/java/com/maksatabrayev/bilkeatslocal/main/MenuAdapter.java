@@ -33,7 +33,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
         DateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
         holder.menuRecyclerRowBinding.dateTextView.setText(dateFormat.format(new Date()));
 
-        String [] lunchMeals = menuArrayList.get()
+
         // holder.menuRecyclerRowBinding.dinnerMealsTextView.setText(menuArrayList.get(position).);
     }
 
