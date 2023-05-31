@@ -3,8 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:title="Home"
-        android:icon="@drawable/baseline_home_24"/>
+        android:icon="@drawable/baseline_home_24"
+        android:iconTint="@color/white"
+        android:title="Home" />
     <item
         android:id="@+id/piano"
         android:title="Piano"
@@ -13,6 +14,7 @@
     <item
         android:id="@+id/calorieTrack"
         android:title="Calorie Tracking"
+        android:iconTint="@color/white"
         android:icon="@drawable/baseline_fastfood_24"/>
 
     <item
@@ -22,8 +24,10 @@
     <item
         android:id="@+id/lpd"
         android:title="LostFound"
+        android:iconTint="@color/white"
         android:icon="@drawable/baseline_watch_24">
 
     </item>
+
 
 </menu>

@@ -100,13 +100,36 @@
              />
 
 
+
+
     </GridLayout>
+
+    <View
+        android:id="@+id/redRect"
+        android:layout_width="443dp"
+        android:layout_height="90dp"
+        android:background="#D12C2B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bilkeatslogo" />
 
     <TextView
         android:id="@+id/allergensTextView"
         android:layout_width="215dp"
         android:layout_height="70dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="132dp"
         android:gravity="center"
         android:text="Allergens"
         android:textSize="30sp"

@@ -17,6 +17,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.maksatabrayev.bilkeatslocal.R;
 import com.maksatabrayev.bilkeatslocal.calorietracking.CalorieTrackingActivity;
 import com.maksatabrayev.bilkeatslocal.databinding.ActivityPersonalInfoBinding;
+import com.maksatabrayev.bilkeatslocal.main.MainActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -56,7 +57,7 @@ public class PersonalInfoActivity extends AppCompatActivity {
                 .set(personalData).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Intent intentToAllergenActivity = new Intent(PersonalInfoActivity.this, CalorieTrackingActivity.class);
+                        Intent intentToAllergenActivity = new Intent(PersonalInfoActivity.this, AllergenActivity.class);
                         intentToAllergenActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intentToAllergenActivity);
                     }

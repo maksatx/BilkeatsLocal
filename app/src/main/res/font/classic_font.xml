@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/raleway_italic"
+       />
+
+    <font
+        android:fontStyle="normal"
+        android:font="@font/disco"
+        android:fontWeight="400"
+        />
+
+    <font
+        android:font="@font/metalic"
+        android:fontWeight="400"
+        android:fontStyle="normal"/>
+</font-family>
+

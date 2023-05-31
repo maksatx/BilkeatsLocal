@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings.ContactActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="381dp"
+        android:layout_height="41dp"
+        android:text="bilkeats_support@gmail.com"
+        android:textColor="#1B4497"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="371dp"
+        android:layout_height="726dp"
+        android:text="If you encounter any technical issues, we are here to help. Our technical support team is available 24/7 to assist you with any problems you may experience. Whether it's an issue with the software itself or a question about how to use certain features, we are always happy to provide the guidance you need. You can reach us via email, phone, or chat, and we will do our best to resolve your issue as quickly as possible. Don't let technical difficulties slow you down – contact us today for the help you need."
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

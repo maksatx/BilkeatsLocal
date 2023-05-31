@@ -24,6 +24,7 @@ import com.maksatabrayev.bilkeatslocal.R;
 import com.maksatabrayev.bilkeatslocal.databinding.ActivityCalorieTrackingBinding;
 import com.maksatabrayev.bilkeatslocal.lpd.LpdActivity;
 import com.maksatabrayev.bilkeatslocal.main.MainActivity;
+import com.maksatabrayev.bilkeatslocal.settings.SettingsActivity;
 import com.maksatabrayev.bilkeatslocal.signup_login.PersonalInfoActivity;
 
 import java.util.HashMap;
@@ -31,6 +32,7 @@ import java.util.Map;
 
 
 public class CalorieTrackingActivity extends AppCompatActivity {
+
     public int takeCarbon;
     public int takeProtein;
     public int takeFat;
@@ -62,12 +64,7 @@ public class CalorieTrackingActivity extends AppCompatActivity {
         database = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
 
-        /*
-        *  Map <String, Object> personalData = value.getDocuments().get(i).getData();
-                   weigth = Integer.parseInt((String)personalData.get("weight"));
-                   height = Integer.parseInt((String) personalData.get("height"));
-                   gender = (String)personalData.get("gender");
-                   activityString = (String) personalData.get("activityLevel");*/
+
 
 
         DocumentReference docRef = database.collection("PersonalInfo").document(auth.getCurrentUser().getEmail());
@@ -85,16 +82,13 @@ public class CalorieTrackingActivity extends AppCompatActivity {
                         activityString = (String) personalData.get("activityLevel");
                         age    =  Integer.parseInt((String) personalData.get("age"));
 
-
                         double activity = 1.35;
                         if(activityString.equals("Light")) activity = 1.2;
                         else if (activityString.equals("Active")) activity = 1.5;
-
                         if(gender.equals("Female"))
                             shouldSumCalorie = (int)((655.1 + 9.56 * weigth + 1.85 * height - 4.67 * age) * activity);
                         else if (gender.equals("Male"))
                             shouldSumCalorie = (int)((66.5 + 13.75 * weigth + 5 * height - 6.77 * age) * activity);
-
 
                         proteinCalorieRemain = (int)(shouldSumCalorie * 30.0/100);
                         carbonCalorieRemain = (int)(shouldSumCalorie * 45.0/100);;
@@ -104,19 +98,27 @@ public class CalorieTrackingActivity extends AppCompatActivity {
                         }
 
                         binding.shouldSome.setText("of " + shouldSumCalorie + " kcal");
-                        binding.remainCarb.setText("" + carbonCalorieRemain);
-                        binding.remainProt.setText("" + proteinCalorieRemain);
-                        binding.remainFat.setText("" + fatCalorieRemain);
+                        binding.remainCarb.setText("" + (carbonCalorieRemain - MainActivity.carbonCal));
+                        binding.remainProt.setText("" + (proteinCalorieRemain-MainActivity.proteinCal));
+                        binding.remainFat.setText("" + (fatCalorieRemain-MainActivity.fatCal));
                         binding.sumCalorie.setText("" + 0);
-                        binding.circularProgressIndicator.setProgress(0);
+                        binding.circularProgressIndicator.setProgress(100*(shouldSumCalorie - (carbonCalorieRemain - MainActivity.carbonCal + proteinCalorieRemain-MainActivity.proteinCal +
+                                fatCalorieRemain-MainActivity.fatCal))/shouldSumCalorie);
+                        binding.sumCalorie.setText("" +(shouldSumCalorie- (carbonCalorieRemain - MainActivity.carbonCal + proteinCalorieRemain-MainActivity.proteinCal +
+                                fatCalorieRemain-MainActivity.fatCal)));
+
                     }
                 }
 
             }
         });
 
+
     }
     public void outsideAdd(View view){
+        proteinCalorieRemain = (int)(shouldSumCalorie * 30.0/100);
+        carbonCalorieRemain = (int)(shouldSumCalorie * 45.0/100);;
+        fatCalorieRemain = (int)(shouldSumCalorie * 25.0/100);
         takeProtein = Integer.parseInt(binding.outProt.getText().toString());
         proteinCalorieRemain -= takeProtein;
         binding.remainProt.setText("" + proteinCalorieRemain);
@@ -134,6 +136,7 @@ public class CalorieTrackingActivity extends AppCompatActivity {
 
     }
 
+
     private void navigationBarController(){
         binding.nav.findViewById(R.id.calorieTrack).setActivated(true);
         binding.nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -144,7 +147,7 @@ public class CalorieTrackingActivity extends AppCompatActivity {
                 } else if (item.getItemId() == R.id.calorieTrack) {
 
                 } else if (item.getItemId() == R.id.settings) {
-
+                    startActivity(new Intent(CalorieTrackingActivity.this, SettingsActivity.class));
                 } else if (item.getItemId() == R.id.lpd) {
                     startActivity(new Intent(CalorieTrackingActivity.this, LpdActivity.class));
                 } else if (item.getItemId() == R.id.piano) {
@@ -153,5 +156,8 @@ public class CalorieTrackingActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+    public void eat(int carbon, int prot, int fat){
+        binding.outCarb.setText("" + 5);
     }
 }

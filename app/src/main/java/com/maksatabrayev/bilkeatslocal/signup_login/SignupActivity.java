@@ -43,7 +43,7 @@ public class SignupActivity extends AppCompatActivity {
             auth.createUserWithEmailAndPassword(emailText,passwordText).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                 @Override
                 public void onSuccess(AuthResult authResult) {
-                    Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SignupActivity.this, PersonalInfoActivity.class);
                     startActivity(intent);
                     finish();
 

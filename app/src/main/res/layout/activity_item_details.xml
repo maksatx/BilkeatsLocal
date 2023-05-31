@@ -7,15 +7,15 @@
     tools:context=".lpd.ItemDetailsActivity">
 
     <ImageView
-    android:id="@+id/declaredImage"
-    android:layout_width="245dp"
-    android:layout_height="137dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.218"
-    app:srcCompat="@drawable/ic_launcher_background" />
+        android:id="@+id/declaredImage"
+        android:layout_width="305dp"
+        android:layout_height="208dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/descriptionTextView"

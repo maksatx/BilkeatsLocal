@@ -30,11 +30,26 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MenuHolder holder, int position) {
-        DateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
-        holder.menuRecyclerRowBinding.dateTextView.setText(dateFormat.format(new Date()));
+        //DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
-        String [] lunchMeals = menuArrayList.get()
-        // holder.menuRecyclerRowBinding.dinnerMealsTextView.setText(menuArrayList.get(position).);
+
+        Menu menu = menuArrayList.get(position);
+        holder.menuRecyclerRowBinding.dateTextView.setText(menu.menuDateString);
+        String [] lunchMeals = menu.getLunchMeals();
+        holder.menuRecyclerRowBinding.lunchMealsTextView.setText(lunchMeals[0] + "\n" +
+                lunchMeals[1] + "\n" +lunchMeals[2] + "\n"+lunchMeals[3]);
+
+        holder.menuRecyclerRowBinding.lunchNutrientsTextView.setText("Calorie: " + menu.getLunchCalorie()+
+                "\nCarbohydrate: " + menu.getLunchCarbohyrate()+"\nProtein: " + menu.getLunchProtein()+"\nFat: " + menu.getLunchFat());
+
+        String [] dinnerMeals = menu.getDinnerMeals();
+        holder.menuRecyclerRowBinding.dinnerMealsTextView.setText(dinnerMeals[0] + "\n" +
+                dinnerMeals[1] + "\n" +dinnerMeals[2] + "\n"+dinnerMeals[3]);
+
+        holder.menuRecyclerRowBinding.dinnerNutrientsTxtView.setText("Calorie: " + menu.getDinnerCalorie()+
+                "\nCarbohydrate: " + menu.getDinnerCarbohydrate()+"\nProtein: " + menu.getDinnerProtein()+"\nFat: " + menu.getDinnerFat());
+
+
     }
 
     @Override

@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class Menu {
     Date currentDate;
     String [] totalMenuArray;
+    String menuDateString;
 
     public Menu(Date date){
         this.currentDate = date;
@@ -54,10 +55,11 @@ public class Menu {
 
             // Getting the menu of the current day
             DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+            menuDateString = dateFormat.format(currentDate);
             if(isSunday(currentDate))
-                result = result.substring(result.indexOf(dateFormat.format(currentDate), 0), result.indexOf("besin", 0));
+                result = result.substring(result.indexOf(menuDateString, 0), result.indexOf("besin", 0));
             else
-                result = result.substring(result.indexOf(dateFormat.format(currentDate), 0), result.indexOf(dateFormat.format(getNextDate(currentDate)), 0));
+                result = result.substring(result.indexOf(menuDateString, 0), result.indexOf(dateFormat.format(getNextDate(currentDate)), 0));
 
             // Inserting into array
             for(int i = 0; i < line.length; i++){
@@ -107,12 +109,13 @@ public class Menu {
                 while (in.hasNext()){
                     String s = in.next();
                     if(!s.equals("/")){
-                        if(Character.isLowerCase(s.charAt(0)) || stringCount == 0 ){
+                        if((Character.isLowerCase(s.charAt(0)) || stringCount == 0) && stringCount < 3){
                             meal+=" "+s;
                             stringCount ++;
                         }
                     }
                 }
+
                 lunchMeals[mealCount] = meal;
                 mealCount++;
                 in.close();
@@ -190,7 +193,7 @@ public class Menu {
                 while (in.hasNext()){
                     String s = in.next();
                     if(!s.equals("/")){
-                        if(Character.isLowerCase(s.charAt(0)) || stringCount == 0 ){
+                        if((Character.isLowerCase(s.charAt(0)) || stringCount == 0) && stringCount < 3 ){
                             meal+=" "+s;
                             stringCount ++;
                         }

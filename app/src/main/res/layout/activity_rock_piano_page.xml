@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pianopage.classical_music.ClassicalPianoPage">
+
+    <ImageView
+        android:id="@+id/backgroundRonesans"
+        android:layout_width="1003dp"
+        android:layout_height="855dp"
+        android:alpha="0.98"
+        android:background="#B3D5C1C1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/rock6" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="287dp"
+        android:layout_height="66dp"
+        android:alpha="0.95"
+        android:background="@drawable/forbutton"
+        android:bufferType="normal"
+        android:fontFamily="@font/metalic"
+        android:onClick="rockMusic1"
+        android:text="Bohemian Rhapsody\nQueen"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bilkeatsLogo"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="287dp"
+        android:layout_height="66dp"
+        android:alpha="0.95"
+        android:background="@drawable/forbutton"
+        android:bufferType="normal"
+        android:fontFamily="@font/metalic"
+        android:onClick="rockMusic2"
+        android:text="Thunderstruck\nACDC"
+        android:textAllCaps="false"
+        android:textSize="60px"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bilkeatsLogo"
+        app:layout_constraintVertical_bias="0.278" />
+
+    <ImageView
+        android:id="@+id/bilkeatsLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bilkeatslogo" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="287dp"
+        android:layout_height="66dp"
+        android:alpha="0.95"
+        android:background="@drawable/forbutton"
+        android:bufferType="normal"
+        android:fontFamily="@font/metalic"
+        android:onClick="rockMusic4"
+        android:text="Mockingbird\nEminem"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bilkeatsLogo"
+        app:layout_constraintVertical_bias="0.647" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="287dp"
+        android:layout_height="66dp"
+        android:alpha="0.95"
+        android:background="@drawable/forbutton"
+        android:bufferType="normal"
+        android:fontFamily="@font/metalic"
+        android:onClick="rockMusic5"
+        android:text="Nothing Else Matters\nMettalica"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bilkeatsLogo"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="287dp"
+        android:layout_height="66dp"
+        android:alpha="0.95"
+        android:background="@drawable/forbutton"
+        android:bufferType="normal"
+        android:fontFamily="@font/metalic"
+        android:onClick="rockMusic3"
+        android:text="Don't Stop Me Now\nQueen"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bilkeatsLogo"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:background="#00FFFFFF"
+        android:onClick="goToPop"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toEndOf="@+id/bilkeatsLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/baseline_arrow_forward_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="644dp"
+        android:layout_marginBottom="64dp"
+        android:background="#00FFFFFF"
+        android:onClick="goToClassic"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundRonesans"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundRonesans"
+        app:layout_constraintVertical_bias="0.933"
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

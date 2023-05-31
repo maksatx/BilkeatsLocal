@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.254" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/MealTextView1"
         android:layout_width="222dp"
         android:layout_height="29dp"
         android:text="Remaining Carbon, gr"
@@ -201,7 +201,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/MealTextView1"
         app:layout_constraintTop_toTopOf="@+id/view2"
         app:layout_constraintVertical_bias="0.24">
 
@@ -320,7 +320,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav"
         android:layout_width="wrap_content"
-
+        android:background="@drawable/transparent_background"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
